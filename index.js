@@ -1,3 +1,4 @@
+
 // Model
 import Category from "./models/category-model.js";
 import Course from "./models/course-model.js";
@@ -9,8 +10,11 @@ import categoryService from "./services/category-service.js";
 import courseService from "./services/course-service.js";
 import InstructorService from "./services/Instructor-service.js";
 
+import {userLogger,courseLogger} from "./services/logger-service.js" ;
 //--user
-const serviceUsers = new userService();
+const loggerService1 = new userLogger();
+const serviceUsers = new userService(loggerService1);
+
 let user1 = new User(7, "srp", "sss", "123", "c++", "java", "python");
 serviceUsers.userAdd(user1);
 serviceUsers.deleteUserRecord(3);
@@ -18,7 +22,7 @@ serviceUsers.updateUserRecord(7, "srpERKAN", "ccc", "45@gmail");
 serviceUsers.getAllUserRecord();
 
 //--category
-console.log("-----------------");
+
 const serviceCategory = new categoryService();
 let category1 = new Category(7, "c#");
 
@@ -28,8 +32,11 @@ serviceCategory.deleteCategoryRecord(2);
 serviceCategory.getAllCategoryRecord();
 serviceCategory.updateCategoryRecord(1, "update Programlama");
 
+
 // ---course
-console.log("-----------------");
+const loggerService2=new courseLogger();
+const serviceCourse = new courseService(loggerService2);
+
 
 let course1 = new Course(
   9,
@@ -41,7 +48,6 @@ let course1 = new Course(
 );
 
 
-const serviceCourse = new courseService();
 serviceCourse.courseAdd(course1);
 serviceCourse.deleteCourseRecord(2);
 serviceCourse.updateCourseRecord(

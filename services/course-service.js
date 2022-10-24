@@ -6,8 +6,10 @@
 import { courseData } from "../data/course-data.js";
 
 export default class courseService {
-  constructor() {
+  constructor(loggerService) {
     this.courses = [];
+    this.loggerService=loggerService
+
     for (const index of courseData) {
       this.courses.push(index);
     }
@@ -15,7 +17,8 @@ export default class courseService {
   //kurs ekle
   courseAdd(course) {
     this.courses.push(course);
-    console.log("kayıt eklendi ",course.corseId)
+    // console.log("kayıt eklendi ",course.corseId)
+    this.loggerService.log("course added",course)
   }
   //kurs sil
   deleteCourseRecord(courseID) {
@@ -23,7 +26,8 @@ export default class courseService {
     if (del > -1) {
       this.courses.splice(del, 1);
     }
-    console.log("Kayıt silindi" );
+    // console.log("Kayıt silindi" );
+    this.loggerService.log("course deleted",courseID)
   }
   //kurs güncelleme
   updateCourseRecord(
@@ -39,7 +43,8 @@ export default class courseService {
     this.courses[find].coursePrice=coursePrice;
     this.courses[find].description=description;
     this.courses[find].Instructor=Instructor;
-    return console.log("Kayıt Güncellendi",courseId);
+    return  this.loggerService.log("course updated", courseId)
+    //  console.log("Kurs Güncellendi",courseId);
 
   }
   //tüm kurslar
