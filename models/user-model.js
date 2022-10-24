@@ -4,7 +4,7 @@ export default class User {
         this.userName=userName;
         this.email=email;
         this.password = password;
-        this.userCourseList=userCourseList;
+        this.userCourseList=userCourseList; // düzenle
     }
 
     showInfosUser() {
