@@ -1,9 +1,10 @@
 export default class User {
-    constructor(userId,userName,email,password) {
+    constructor(userId,userName,email,password,...userCourseList) {
         this.userId = userId;
         this.userName=userName;
         this.email=email;
         this.password = password;
+        this.userCourseList=userCourseList;
     }
 
     showInfosUser() {
@@ -11,7 +12,8 @@ export default class User {
         "userId",this.userId,
         "userName",this.userName,
         "email",this.email,
-        "passwor",dthis.password 
+        "passwor",dthis.password ,
+        "userCourseList",...this.userCourseList
         );
     }
 }
