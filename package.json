@@ -1,0 +1,23 @@
+{
+  "name": "oop_workspace",
+  "version": "1.0.0",
+  "description": "OOP'e uygun olarak nesneleri/varlıkları/operasyonları tanımlama",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+     "start": "node index.js"
+   
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerapErkan/oop_workspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SerapErkan/oop_workspace/issues"
+  },
+  "homepage": "https://github.com/SerapErkan/oop_workspace#readme"
+}
