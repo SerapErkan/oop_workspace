@@ -1,9 +1,3 @@
-//tüm kategorileri getir
-// kategory ekle
-// kategory sil 
-// kategoryleri düzenle 
-// kategory filitrele 
-
 
 import { categoryData } from "../data/category-data.js";
 
