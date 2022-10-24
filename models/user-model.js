@@ -12,7 +12,7 @@ export default class User {
         "userId",this.userId,
         "userName",this.userName,
         "email",this.email,
-        "passwor",dthis.password ,
+        "password",this.password ,
         "userCourseList",...this.userCourseList
         );
     }
