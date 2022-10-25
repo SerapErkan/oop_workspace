@@ -1,8 +1,3 @@
-//course ekle 
-//course sil 
-//course search
-// tüm kursları getir 
-// ıd verilen kursu alan ögrenci sayısını getire 
 import { courseData } from "../data/course-data.js";
 
 export default class courseService {

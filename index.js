@@ -1,4 +1,3 @@
-
 // Model
 import Category from "./models/category-model.js";
 import Course from "./models/course-model.js";
@@ -14,7 +13,6 @@ import {userLogger,courseLogger} from "./services/logger-service.js" ;
 //--user
 const loggerService1 = new userLogger();
 const serviceUsers = new userService(loggerService1);
-
 let user1 = new User(7, "srp", "sss", "123", "c++", "java", "python");
 serviceUsers.userAdd(user1);
 serviceUsers.deleteUserRecord(3);
@@ -22,7 +20,6 @@ serviceUsers.updateUserRecord(7, "srpERKAN", "ccc", "45@gmail");
 serviceUsers.getAllUserRecord();
 
 //--category
-
 const serviceCategory = new categoryService();
 let category1 = new Category(7, "c#");
 
@@ -31,12 +28,9 @@ serviceCategory.getFilterCategoryName("Programlama");
 serviceCategory.deleteCategoryRecord(2);
 serviceCategory.getAllCategoryRecord();
 serviceCategory.updateCategoryRecord(1, "update Programlama");
-
-
 // ---course
 const loggerService2=new courseLogger();
 const serviceCourse = new courseService(loggerService2);
-
 
 let course1 = new Course(
   9,
@@ -46,7 +40,6 @@ let course1 = new Course(
   "Engin Demirog",
   "PAHALI"
 );
-
 
 serviceCourse.courseAdd(course1);
 serviceCourse.deleteCourseRecord(2);
@@ -61,14 +54,11 @@ serviceCourse.getAllCourseRecord();
 serviceCourse.getFilterCourseName("YENİ");
 serviceCourse.getAllCourseRecord();
 
-
-//
 course1.showInfosCourse();
 console.log("-----------------");
 user1.showInfosUser();
 console.log("-----------------");
 category1.showInfosCategory();
-
 
 // ---Instructor
 console.log("-----------------");

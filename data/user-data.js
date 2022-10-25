@@ -1,5 +1,4 @@
 export const userData=[
-
     {
         userId:1,
         userName:"user1",
